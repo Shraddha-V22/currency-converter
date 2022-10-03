@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All About Currencies</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <form id="currency-converter">
+      <label for="from">From: </label>
+      <select name="from" id="from">
+        <option>Select</option>
+      </select>
+      <label for="to">To: </label>
+      <select name="to" id="to">
+        <option>Select</option>
+      </select>
+      <label for="amt"></label>
+      <input type="number" id="amt">
+      <button type="submit" id="submit-btn">Convert</button>
+    </form>
+    <div id="output"></div>
+  </body>
+</html>
