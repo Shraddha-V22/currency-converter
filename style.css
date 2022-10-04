@@ -10,10 +10,26 @@
 
 body {
     font-family: 'Karla', sans-serif;
+    text-align: center;
 }
 
 input,
 button,
 select {
     font-family: inherit;
+    width: 250px;
+    padding: 10px;
+    font-size: inherit;
+    border-radius: 5px;
+    border: 1px solid thistle;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    justify-items: center;
+    gap: .5rem;
+}
+
