@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+@keyframes waves {
+  100% {
+    background-position: 10% 10%;
+  }
+}
+
 body {
   font-family: "Karla", sans-serif;
   background: url("layered-waves-haikei.svg") no-repeat center center fixed;
@@ -15,6 +21,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  animation: waves 10s infinite alternate linear;
 }
 
 button#submit-btn {
@@ -26,29 +33,6 @@ button#submit-btn {
   position: relative;
   /* overflow: hidden; */
 }
-/* button#submit-btn::after {
-  background-color: hsl(4, 94%, 69%);
-  border-radius: 40% 60% 0 0;
-  position: absolute;
-  content: "";
-  display: block;
-  position: absolute;
-  width: 250px;
-  margin-bottom: 50px;
-  margin-left: 50px;
-  padding-top: 50px;
-  padding-left: 100px;
-  top: 0;
-  left: 0;
-  transition: all 2s;
-  /* opacity: 0; */
-/* }
-button#submit-btn:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s;
-} */
 
 input,
 button,
@@ -116,4 +100,15 @@ form {
   padding: 20px;
   border-radius: 10px;
   background-color: hsla(0, 0%, 100%, 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
