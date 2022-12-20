@@ -16,12 +16,12 @@
 
 body {
   font-family: "Karla", sans-serif;
-  background: url("layered-waves-haikei.svg") no-repeat center center fixed;
+  background: url("/bg-img.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  animation: waves 10s infinite alternate linear;
+  /* animation: waves 10s infinite alternate linear; */
 }
 
 button#submit-btn {
@@ -30,8 +30,11 @@ button#submit-btn {
   color: hsl(4, 94%, 69%);
   font-weight: bold;
   font-size: 20px;
-  position: relative;
-  /* overflow: hidden; */
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
 }
 
 input,
@@ -64,15 +67,15 @@ label {
   font-weight: 500;
 }
 
-form {
+form#currency-converter {
   display: flex;
   flex-direction: column;
   justify-items: center;
   gap: 0.5rem;
-  border: 1px solid;
   padding: 20px;
   border-radius: 10px;
-  background-color: hsla(0, 0%, 100%, 0.7);
+  background-color: rgba(249, 249, 249, 0.6);
+  backdrop-filter: blur(10px);
 }
 
 .container {
@@ -85,18 +88,20 @@ form {
   gap: 2rem;
 }
 
-/* #output {
-  width: 400px;
-  border: 1px solid;
-  padding: 20px;
+#output,
+#amount-details {
+  /* width: 400px; */
   border-radius: 10px;
-  background-color: hsla(0, 0%, 100%, 0.7);
-} */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 
-#output > h4,
-#result > li {
+#output > p,
+#amount-details > li {
   width: 400px;
-  border: 1px solid;
   padding: 20px;
   border-radius: 10px;
   background-color: hsla(0, 0%, 100%, 0.7);
